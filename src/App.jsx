@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='taskpage' element={<Task/>}/>
-        <Route path='taskvew' element={<Vew/>} />
+        <Route path='taskvew/:id' element={<Vew/>} />
       </Routes>
     </Router>
   )

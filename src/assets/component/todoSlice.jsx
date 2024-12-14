@@ -8,18 +8,18 @@ const todoSlice = createSlice({
     },
     reducers:{
         store:(state , action) => {
-            state.value.push({id: state.value.length,text:action.payload,color:"white"})
+            state.value.push({id: state.value.length+1,text:action.payload,color:"white"})
         },
         store2:(state , action) => {
-            state.value2.push({id:state.value2.length,text:action.payload})
+            state.value2.push({id:state.value2.length+1,text:action.payload})
         },
         TodoDelete:(state,action) => {
             state.value = state.value.filter((_,index) =>index != action.payload)
             state.value2 = state.value2.filter((_,index) =>index != action.payload)
         } ,
         addColor:(state,action) => {
-          state.value = state.value.map((item , index) => index === action.payload ? {...item,color:"red"} : item)
-        }
+          state.value = state.value.map((item) => item.id === action.payload ? {...item,color:"red"} : item)
+        } ,
     }
 })
 

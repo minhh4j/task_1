@@ -12,7 +12,7 @@ function Home() {
   
 
     const hnadleName = (id) => {
-        navigate("/taskvew")
+        navigate(`/taskvew/${id}`)
         
        }
 
@@ -20,6 +20,7 @@ function Home() {
         dispatch(TodoDelete(index))
         navigate("/")
     }
+
 
 
 
